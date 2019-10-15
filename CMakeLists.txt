@@ -9,6 +9,8 @@ ELSE()
    SET(CMAKE_BUILD_TYPE Release CACHE STRING ${BUILD_TYPE_HELP})
 ENDIF()
 
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+
 # swig_add_module complains quite verbosly on newer cmake versions
 SET(CMAKE_WARN_DEPRECATED OFF)
 
